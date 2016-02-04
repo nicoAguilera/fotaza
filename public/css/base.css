@@ -1,0 +1,224 @@
+/* Fuente Principal */
+@font-face{
+	font-family:FuenteMenu;
+	src: url(../fonts/Questrial-Regular.ttf) format('truetype');
+}
+
+
+/*Elimino los estilos por defecto*/
+ul{
+	list-style-position:inside;
+}
+ul li{
+	list-style-type:none;
+}
+ul li a{
+	text-decoration:none;
+}
+
+body{
+	padding-top: 65px;
+	background-color: #f9f9f9;
+}
+
+/* centra la barra de paginación del inicio */
+.main nav{
+	text-align: center;
+}
+
+/* averiguar el paramentro necesario para anular esta propiedad */
+.galeria {
+	box-sizing:content-box;
+	webkit-box-sizing:content-box;
+}
+
+/* clase para alinear el titulo con las etiquetas y el detalle del post */
+.alineacion .row{
+	margin-left: 0px;
+}
+
+/* Titulo de la pagina perfil para actualizar los datos del mismo */
+.actualizarPerfil h2{
+  margin-top: 0px;
+}
+
+/* Caja que contiene los detalles del post */
+.detallePost{
+	background-color: #eee;
+	height: 425px;
+	overflow: scroll;
+}
+
+/* Etiquetas del post */
+#etiquetas{
+	margin-bottom: 20px;
+}
+
+/* Detalle del post */
+#detalle p{
+	margin-bottom: 0px;
+}
+
+/*#detalle .btnCambiar {
+	margin-bottom: 30px;
+}*/
+
+.detalle .form-control{
+	margin-bottom: 8px;
+}
+
+/* separar los botones de cambiar y guardar de los comentarios */
+.alineacion .detalle{
+	margin-bottom: 30px;
+}
+
+
+/* boton para eliminar comentario */
+.detallePost .panel-footer a{
+	float: right;
+}
+
+/* boton para agregar un nuevo comentario */
+#agregarComent {
+	float: right;
+}
+
+#btnDetalle{
+	float: right;
+}
+
+
+.main{
+	background-color: white;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+/* Elimina el margen inferior de los label de la pagina de informacion de perfil */
+.infoPerfil label{
+	margin-bottom: 15px;
+}
+.infoPerfil a{
+	margin-bottom: 15px;
+}
+.infoPerfil .btnCambiar{
+	margin-bottom: 15px;
+}
+
+.alinearBarraVerticalmente{
+	/*margin-top: 0px;*/
+	margin-bottom: 0px;
+}
+
+.mostrarInput{
+	display: block;
+}
+.ocultarInput{
+	display: none;
+}
+
+/* Sobrescribo los estilos por defecto de Kendo para el menu lateral */
+
+/* elimino la sombra de los elementos raiz cuando ganan el foco */
+span.k-in.k-state-focused{
+	box-shadow: 0 0 0 0;
+}
+/* Elimino el color gris de fondo de los elementos raiz cuando se produce el hover*/
+span.k-in.k-state-hover{
+	background-color: white;
+}
+/* Elimino el fondo de los elementos raiz cuando están seleccionados */
+span.k-in.k-state-selected{
+	background-color: white;
+}
+/* un link gana el foco y está seleccionado */
+a.k-in.k-state-selected.k-state-focused{
+	color:#7935AC;
+	font-weight: bold;
+	background-color: white;
+	border-color: white;
+}
+/* elimino la sombra del link cuando gana el foco */
+a.k-state-focused{
+	box-shadow: 0 0 0 0;
+}
+/* hover de los link */
+.k-treeview .k-in.k-state-hover{
+	color:#7935AC;
+	background-color: white;
+}
+/* elimino el contorno de los enlaces */
+.k-treeview .k-in{
+	border-width: 0px;
+}
+/* un link pierde el foco pero permanece seleccionado */
+a.k-in.k-state-selected{
+	border-color: white;
+	background-color: white;
+	color:#7935AC;
+	font-weight: bold;
+}
+
+
+
+
+
+/* Menu Secundario para dispositivos moviles */
+.menu-superior-secundario{
+	padding-left: 30px;
+}
+.k-dropdown{
+	width: 190px;
+}
+
+
+/* Barra de navegación superior */
+.navbar{
+   margin-bottom: 0px;
+}
+.navbar-brand{
+   padding-top: 10px;
+   padding-left: 8px;
+}
+.navbar-toggle{
+   margin-right: 15px;
+}
+.dropdown-menu{
+    min-width: 168px;
+}
+
+
+/* Posiciona correctamente el icono de la barra de busqueda */
+.glyphicon{
+  top:0px;
+}
+.barra-busqueda-movil{
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
+
+span.k-widget.k-dropdown.k-header{
+	margin-bottom: 8px;
+}
+
+
+/* Contenedor de la sección principal */
+.main {
+	min-height: 30em;
+}
+
+/* Le doy un margen con sombra a la sección de los productos */
+.main .productos.k-widget{
+	border-color: #ddd;
+	box-shadow: 3px 0 15px #e8e8e8;
+}
+
+
+
+/*
+ *	Fin del contenido principal
+ *
+ */

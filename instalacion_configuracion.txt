@@ -1,0 +1,5 @@
+El usuario administrador tiene asociado el id Nº 1 en la base de datos que se debe mantener ya que se utiliza el mismo para
+identificarlo dentro de la aplicación.
+
+En el archivo config.php se encuentran definidas las variables globales de la aplicación.
+Si se instala la misma en un directorio distinto de localhost se debe modificar dichas rutas en este archivo.
