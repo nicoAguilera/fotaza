@@ -1,5 +1,6 @@
 <?php
-/*
+/**
+    Implemento una seudo api restful invocando los distintos verbos (get, post, put y delete)
 * Clase que gestiona todos los requerimientos del sistema a traves de la interacción con las vistas
 * 
 */
@@ -23,24 +24,28 @@ class GestorReqPrincipal extends Controller
     	$gestionarSesion->validarSesion($_POST["email"], $_POST["password"]);
     }
 
+    // llama al metodo DELETE/Session
     public function destruirSession()
     {
     	$gestionarSesion = new GestionarSesion;
     	$gestionarSesion->destroySession();
     }
 
+    // llama al metodo POST/usuario
     public function registrarNuevoUsuario()
     {
     	$gestionarSesion = new GestionarSesion;
     	$gestionarSesion->nuevoUsuario($_POST["nombre"], $_POST["apellido"], $_POST["domicilio"], $_POST["email"], $_POST["password"]);
     }
 
+    // llama al metodo GET/usuarios?id=$idUsuario
     public function obtenerUsuario($idUsuario)
     {
         $gestionarSesion = new GestionarSesion;
         return $gestionarSesion->obtenerUsuario($idUsuario);
     }
 
+    // llama al metodo PUT/usuarios?id=$_POST['id']&columna=$_POST['columna']&dato=$_POST['dato']
     public function actualizarUsuario()
     {
         $gestionarSesion = new GestionarSesion;
@@ -110,12 +115,15 @@ class GestorReqPrincipal extends Controller
     }
 
     /*
-    * Recupera las publicaciones de la db y la retorna a la vista "publicaciones.php" como un arreglo de objetos de tipo Publicacion
+    * verbo HTTP: GET
+    * url: GestorReqPrincipal/posts/$limite
+    * response: JSON de objetos Post
+    * Descripción: Recupera los posts de la db y los retorna a la vista "posts.php" como un arreglo de objetos de tipo Post en formato JSON
     */
-    public function listarPosts($limite, $idUsuario=NULL, $tipo=NULL)
+    public function posts($limite, $idUsuario=NULL, $tipo=NULL)
     {
         $gestionarPost = new GestionarPost;
-        return $gestionarPost->listarPosts($limite, $idUsuario, $tipo);
+        echo json_encode($gestionarPost->listarPostsSolamente($limite, $idUsuario, $tipo));
     }
 
     # obtiene los datos asociados a la publicacion solicitada
@@ -235,7 +243,10 @@ class GestorReqPrincipal extends Controller
         $totalPaginas = $this->obtenerCantPaginas($idUsuario, $pagina);
         $inicio = ($numPagina - 1) * PAGINACION;
         if($pagina=='posts'){
-            $this->view->render($this, $pagina, array('publicaciones'=>$this->listarPosts($inicio), "pagina"=>$pagina, "totalPaginas"=>$totalPaginas, "numPagina"=>$numPagina) );
+            //nuevo llamado pasando como parametro el inicio de la paginacion
+            $this->view->render($this, $pagina, array("inicio"=>$inicio, "pagina"=>$pagina, "totalPaginas"=>$totalPaginas, "numPagina"=>$numPagina) );
+            //llamado antiguo
+            //$this->view->render($this, $pagina, array('publicaciones'=>$this->listarPosts($inicio), "pagina"=>$pagina, "totalPaginas"=>$totalPaginas, "numPagina"=>$numPagina) );
         }else{
             # Obtengo el usuario y verifico que su cuenta se encuentra activa
             $usuario = $this->obtenerUsuario($idUsuario);

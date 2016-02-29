@@ -1,7 +1,4 @@
 <?php
-//include "GestorEtiqueta.php";
-require '../../libs/ORM.php';
-//require 'Post.php';
 
 /**
 * Clase que gestiona el ciclo de vida de la publicaciones (Imagenes y videos)
@@ -13,8 +10,8 @@ class GestorPost extends ORM
 	/**
 	Usar una unica variable definiendola como array en el caso de posts
 	*/
-	private $post;
-	private $posts;
+	public $post;
+	public $posts;
 	
 	function __construct()
 	{

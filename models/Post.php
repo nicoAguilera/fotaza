@@ -5,12 +5,16 @@
 */
 class Post
 {
-	private $P_ID;
-	private $P_Titulo;
-	private $P_Detalle; 
-	private $P_Fecha;
-	private $P_Visibilidad;
-	private $P_ID_Video;
+	/*
+	* Cambie la visibilidad de los atributos de privado a publico para poder convertir los objetos a formato JSON aunque esto
+	* viola el concepto de POO. Esta es una solución provisoria.
+	*/
+	public $P_ID;
+	public $P_Titulo;
+	public $P_Detalle; 
+	public $P_Fecha;
+	public $P_Visibilidad;
+	public $P_ID_Video;
 
 	# arreglo de comentarios asociados a la publicación determinado por la relación "Sobre"
 	private $comentarios;

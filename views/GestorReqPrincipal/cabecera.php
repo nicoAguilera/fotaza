@@ -3,18 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Fotaza</title>
-	<script src="<?php echo URL; ?>public/js/jquery-1.11.0.min.js"></script>
+	<!-- Modifique todas las rutas de absolutas a relativas -->
+	<script src="public/js/jquery-1.11.0.min.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"-->
-	<link rel="stylesheet" href="<?php echo URL; ?>public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="<?php echo URL; ?>public/js/bootstrap.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
 
-	<link type="text/css" href="<?php echo URL; ?>public/css/jquery-ui-1.10.4.custom.min.css" rel="Stylesheet" />
+	<link type="text/css" href="public/css/jquery-ui-1.10.4.custom.min.css" rel="Stylesheet" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="public/css/base.css">
 </head>
 <body>
 	<div class="container">

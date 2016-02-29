@@ -1,0 +1,22 @@
+1 - Implementar web sockets para notificaciones en tiempo real
+    (Icluye baja de cuenta y cerrar sesión)
+2 - Utilizar polymer para diseñar y construir el frontend
+	o react
+3 - Crear una cuenta y guardar el proyecto en Github para mantener
+    control de versiones
+4 - Implementar diseño de api rest con verbos http
+	Lo puedo hacer a dos niveles, el primero a nivel de los subgestores
+	dando lugar a apis internas diferenciadas y en segundo nivel a
+	los gestores CRUD del modelo
+5 - Encriptar contraseñas.
+6 - Autenticacion y tokens con OAuth
+7 - controlar el acceso de la url a los distintos directorios de
+    la aplicacion y en el caso de no tener permitido, negar el acceso
+    u ocultar la barra de direcciones
+8 - implementar  setter and getter magicos NO!!! viola el concepto de
+		encapsulamiento en poo
+9 - ver canal eytostudios y manuel j davila para sacar cosas
+
+
+Correcciones
+Cambiar url absoluta a relativa

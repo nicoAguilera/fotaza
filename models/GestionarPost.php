@@ -131,9 +131,28 @@ class GestionarPost
 			}
 		}
 
+		//retorno en format json los posts
+		//echo json_encode($posts);
 		return $posts;
 	}
 
+	/*
+	*	Defino un nuevo metodo para listar los posts sin las etiquetas y comentarios
+	*/
+	public function listarPostsSolamente($limite, $idUsuario, $tipo)
+	{
+		//obtengo los posts
+		$gestorPost = new GestorPost;
+		$gestorPost->obtenerPosts($limite, $idUsuario, $tipo);
+		$posts = $gestorPost->getPosts();
+
+		return $posts;
+	}
+
+	/**
+		Definir dos nuevos metodos para listar los comentarios y otro para listar las etiquetas de un post
+	*
+	*/
 
 	# determina la cantidad de páginas de acuerdo a la cantidad de post para realizar la paginación y la retorna
 	public function cantidadPaginas($idUsuario, $tipoPost)
